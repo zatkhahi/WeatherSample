@@ -5,13 +5,12 @@
     <UserSecretsId>58af068d-4b12-48d4-9d51-454f1ddeec7e</UserSecretsId>
     <EnableNETAnalyzers>false</EnableNETAnalyzers>
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>    
-    <Version>1.3.0</Version>
-    <Company>Pardazeshgaran Petro Hooshmand INPROC.IR</Company>
-    <Product>HRM</Product>
-    <Authors>INPROC</Authors>
+    <Version>1.0.0</Version>
+    <Product>WeatherSample</Product>
+    <Authors>Mohammad Zatkhahi</Authors>
     <Copyright>Copyright © INPROC 2021</Copyright>    
     <Configurations>Debug;Release</Configurations>
-    <AssemblyName>HRMWebApp</AssemblyName>
+    <AssemblyName>WeatherSampleApp</AssemblyName>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
@@ -23,7 +22,6 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>F:\Projects\HRM\Codes\Presentation\HRM\HRMWebApp.xml</DocumentationFile>
   </PropertyGroup>
 
   
@@ -40,9 +38,6 @@
  
 
   <ItemGroup>
-    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
-    <PackageReference Include="AutoMapper" Version="10.1.1" />    
-    <PackageReference Include="FluentValidation.AspNetCore" Version="9.4.0" />    
     <PackageReference Include="MailKit" Version="2.13.0" />        
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.5" />

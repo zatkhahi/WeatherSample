@@ -4,9 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
     <Version>1.0.0</Version>
     <PackageId>CommonDomain</PackageId>
-    <Authors>INPROC</Authors>
+    <Authors>Mohammad Zatkhahi</Authors>
     <Product>CommonDomain</Product>
-    <AssemblyName>HRM.Core.Domain</AssemblyName>
+    <AssemblyName>WeatherSample.Core.Domain</AssemblyName>
     <RootNamespace>Domain</RootNamespace>    
   </PropertyGroup>
  

@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Version>1.0.0</Version>
-    <Authors>INPROC</Authors>
-    <AssemblyName>HRM.Common.Persistence</AssemblyName>    
+    <Authors>Mohammad Zatkhahi</Authors>
+    <AssemblyName>WeatherSample.Common.Persistence</AssemblyName>    
   </PropertyGroup>
 
   <ItemGroup>
