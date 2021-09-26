@@ -57,6 +57,7 @@ namespace HRM.Persistence
                 EmailConfirmed = true,
                 FirstName = "Mohammad",
                 LastName = "Zatkhahi",
+                ConcurrencyStamp = "99e999c6-0e08-4d9b-bd45-f5decf3c1563",
                 NormalizedEmail = "m.zatkhahi@gmail.com".ToUpper(),
                 PasswordHash = hasher.HashPassword(null, "123456")
             });

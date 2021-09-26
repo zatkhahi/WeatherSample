@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using WeatherSample.Domain;
 
 namespace WeatherSample.Application.Interfaces
 {
-    public interface IWeatherDbContext
+    public interface IWeatherDbContext : ICommonDbContext
     {
         DbSet<CityWeatherData> CityWeatherDatas { get; set; }
     }

@@ -23,6 +23,12 @@
       "dotnetRunMessages": "true",
       "nativeDebugging": false,
       "applicationUrl": "http://localhost:50398"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true,
+      "useSSL": true
     }
   }
 }

@@ -1,4 +1,5 @@
 using Application.Interfaces;
+using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -7,10 +8,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Security.Principal;
+using WeatherSample.Application;
 using WeatherSample.Application.Interfaces;
+using WeatherSample.Application.Weather.Services;
 
 namespace HRM
 {
@@ -86,12 +90,15 @@ namespace HRM
                 configuration.RootPath = "ClientApp";
             });
 
+            services.AddHangfire(config =>
+                config.UseSqlServerStorage(Configuration.GetConnectionString("MyDbConnection")));
 
-
+            services.AddScoped<IWeatherUpdate, WeatherUpdateService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public override void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+            IServiceProvider serviceProvider)
         {
             app.UseCors("EnableCORS");
 
@@ -113,6 +120,11 @@ namespace HRM
 
             app.UseOpenApi();
             app.UseSwaggerUi3();
+
+            GlobalConfiguration.Configuration.UseActivator(new HangfireActivator(serviceProvider));
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
+
 
             app.UseMvc();
             //app.MapWhen(context =>

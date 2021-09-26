@@ -12,6 +12,8 @@
     <Copyright>Copyright © INPROC 2021</Copyright>    
     <Configurations>Debug;Release</Configurations>
     <AssemblyName>HRMWebApp</AssemblyName>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -53,6 +55,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.7" />
     <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
     <PackageReference Include="Microsoft.Management.Infrastructure" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
     <PackageReference Include="NSwag.AspNetCore" Version="13.10.2" />    
   </ItemGroup>
   

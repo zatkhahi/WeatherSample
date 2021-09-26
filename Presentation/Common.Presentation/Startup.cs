@@ -45,9 +45,7 @@ namespace Common.Presentation
             services.AddHostedService<QueuedHostedService>();
         }
 
-        public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-        }
+        
 
         public void ConfigureMailServices(IServiceCollection services)
         {

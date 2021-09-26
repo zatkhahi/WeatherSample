@@ -1,0 +1,13 @@
+@server=http://localhost:50398
+@token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJzdWIiOiIxIiwidW5pcXVlX25hbWUiOiJhZG1pbiIsImVtYWlsIjoibS56YXRraGFoaUBnbWFpbC5jb20iLCJqdGkiOiI1MzBlYWM4Zi1kMGE2LTQyOTgtYTI4OC1kMzUyNDYxYzNjNWEiLCJyb2xlIjoiQWRtaW5pc3RyYXRvciIsIm5iZiI6MTYzMjY4NTYwMCwiZXhwIjoxNjQwNDYxNjAwLCJpYXQiOjE2MzI2ODU2MDB9.4-b4U8AeeS5-HWSEa_P3R7XyjIRkmCCQXkBHTQWYkNXmr8Gx9FJTb7gm2J_Dy7kd4DBDrWQj7IW29ao4WMciTg
+
+
+### register a new user
+POST {{server}}/api/Weather/ScheduleWeatherUpdate
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "ScheduleTime": "2021-09-27 01:14:35",
+    "cityName": "Tehran"
+}
