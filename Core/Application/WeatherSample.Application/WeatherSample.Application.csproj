@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\WeatherSample.Domain\WeatherSample.Domain.csproj" />
+    <ProjectReference Include="..\Core\Common.Application.csproj" />
+  </ItemGroup>
+
+</Project>

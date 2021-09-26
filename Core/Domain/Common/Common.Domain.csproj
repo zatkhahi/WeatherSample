@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <PackageId>CommonDomain</PackageId>
+    <Authors>INPROC</Authors>
+    <Product>CommonDomain</Product>
+    <AssemblyName>HRM.Core.Domain</AssemblyName>
+    <RootNamespace>Domain</RootNamespace>    
+  </PropertyGroup>
+ 
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />    
+  </ItemGroup>
+
+</Project>
